@@ -63,4 +63,14 @@ $(document).ready(function () {
     $('.js-pulse').addClass('animate__animated animate__pulse');
   }, { offset: '20%' });
 
+  /* nav bar */
+  $('.nav-burger').click(function () {
+    $('.main-nav').slideToggle(200)
+    if ($('.nav-burger ion-icon').attr('name') == 'reorder-three') {
+      $('.nav-burger ion-icon').attr('name', 'close')
+    } else {
+      $('.nav-burger ion-icon').attr('name', 'reorder-three')
+    }
+
+  });
 });
