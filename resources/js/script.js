@@ -59,4 +59,8 @@ $(document).ready(function () {
     $('.js-phone').addClass('animate__animated animate__fadeInUpBig');
   }, { offset: '50%' });
 
+  $('.section-plans').waypoint(function (direction) {
+    $('.js-pulse').addClass('animate__animated animate__pulse');
+  }, { offset: '20%' });
+
 });
