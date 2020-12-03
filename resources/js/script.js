@@ -1,38 +1,38 @@
 $(document).ready(function () {
 
-    /* sticky nav */
-    $('.js-nav').waypoint(function (direction) {
-        if (direction == "down") {
-            $('nav').addClass('sticky');
-        } else {
-            $('nav').removeClass('sticky');
-        }
-    },
-        {
-            offset: '50px;'
-        });
-    /* scroll buttons */
-    $(".js-signup").click(function () {
-        $('html, body').animate({
-            scrollTop: $(".section-plans").offset().top - 50
-        }, 2000);
+  /* sticky nav */
+  $('.js-nav').waypoint(function (direction) {
+    if (direction == "down") {
+      $('nav').addClass('sticky');
+    } else {
+      $('nav').removeClass('sticky');
+    }
+  },
+    {
+      offset: '50px;'
     });
-    $(".js-show-more").click(function () {
-        $('html, body').animate({
-            scrollTop: $(".section-features").offset().top - 50
-        }, 500);
-    });
+  /* scroll buttons */
+  $(".js-signup").click(function () {
+    $('html, body').animate({
+      scrollTop: $(".section-plans").offset().top - 50
+    }, 2000);
+  });
+  $(".js-show-more").click(function () {
+    $('html, body').animate({
+      scrollTop: $(".section-features").offset().top - 50
+    }, 500);
+  });
 
-    /* smooth scrolling snippet (required to add anchors in html file) */
-    $('a[href*="#"]')
+  /* smooth scrolling snippet (required to add anchors in html file) */
+  $('a[href*="#"]')
     // Remove links that don't actually link to anything
     .not('[href="#"]')
     .not('[href="#0"]')
-    .click(function(event) {
+    .click(function (event) {
       // On-page links
       if (
-        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-        && 
+        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+        &&
         location.hostname == this.hostname
       ) {
         // Figure out element to scroll to
@@ -49,5 +49,10 @@ $(document).ready(function () {
         }
       }
     });
-    
+
+  /* scroll animations */
+  $('.js-fade-in').waypoint(function (direction) {
+    $('.js-fade-in').addClass('animate__animated animate__fadeInUp');
+  }, { offset: '50%' });
+
 });
