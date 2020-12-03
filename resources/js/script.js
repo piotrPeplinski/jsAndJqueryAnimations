@@ -55,4 +55,8 @@ $(document).ready(function () {
     $('.js-fade-in').addClass('animate__animated animate__fadeInUp');
   }, { offset: '50%' });
 
+  $('.js-phone').waypoint(function (direction) {
+    $('.js-phone').addClass('animate__animated animate__fadeInUpBig');
+  }, { offset: '50%' });
+
 });
